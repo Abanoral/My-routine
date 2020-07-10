@@ -4,7 +4,7 @@ const nomrbreUsuario  = document.querySelector('#nombreUsuario');
 
 const getMyJson = async () => {
   try {
-    const resPost = await fetch('https://journey-gym-server-app.herokuapp.com/');
+    const resPost = await fetch('https://journey-gym-server-app.herokuapp.com/session');
     const post = await resPost.json();
     console.log(post)
   } catch (error) {
