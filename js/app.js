@@ -1,11 +1,13 @@
-const tryAA = async () => {
-  try {
-    const data = await fetch("https://journey-gym-server-app.herokuapp.com/session")
-    console.log(data);
-    const info = await data.json();
-    console.log(info); 
-  } catch (error) {
-    console.log("error", error);
-  }
-}
-tryAA();
+const getData = () => {
+  return fetch("https://journey-gym-server.herokuapp.com/session", {
+    method: "GET",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json; charset=utf-8",
+    },
+    dataType: "text",
+  })
+    .then((response) => response.json())
+    .then((res) => console.log(res));
+};
+getData();
