@@ -32,11 +32,12 @@ This is a desktop mockup [balsamic](./mock/my-rutine.bmpr)
 ## DataStructure
 
 ## APIs
-
+Personal Api [Personal Api](https://journey-gym-server.herokuapp.com/session)
 ## Links
 
 ### Trello
 
 ### Github
+My github [github](https://github.com/Abanoral/My-rutine/tree/master)
 
 ### Slides
