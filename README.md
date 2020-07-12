@@ -23,8 +23,11 @@ The MVP will contains:
 **Login:** A sign in form for existing users.
 
 ## Backlog
+- You can create sessions
+- Each session has exercise/s
 
 ## Wireframes
+This is a desktop mockup [balsamic](./mock/my-rutine.bmpr)
 
 ## DataStructure
 
