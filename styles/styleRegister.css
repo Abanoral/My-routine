@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: snow;
+}
+
+#container-register {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  height: 3rem;
+  width: 20rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+#container-button-signup {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+#signup-button {
+  border-radius: 4px;
+  border-width: 1px;
+  background-color: #343a40;
+  color: white;
+  width: 50%;
+  height: 3rem;
+}
