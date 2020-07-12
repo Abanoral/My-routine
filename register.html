@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="./styles/styleRegister.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Journey - Register</title>
+</head>
+<body>
+  <header class="container">
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand" id="nombreUsuario">Journey Gym</span>
+      <div id="botones">
+        <button class="btn btn-outline-success">Acceder</button>
+        <button class="btn btn-outline-danger">Cerrar sesion</button>
+      </div>
+    </nav>
+  </header>
+  
+  <main id="container-register">
+    <form action="">
+      <label for="userName">Username</label>
+      <input type="text" placeholder="Userame" id="username" >
+      <label for="email">Email</label>
+      <input type="email" placeholder="Email" id="email" >
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" >
+      <label for="confirm-password">Confirm password</label>
+      <input type="password" placeholder="Confirm password" id="confirm-password" >
+      <dir id="container-button-signup">
+        <button type="submit" id="signup-button">Signup</button>
+      </dir>
+    </form>
+  </main>
+  <script src="./js/register.js"></script>
+</body>
+</html>
