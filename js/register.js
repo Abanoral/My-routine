@@ -26,12 +26,16 @@ class Register {
   }
   
   saveData = event => {
+    // evento cancelado y no recarga la web
+    event.preventDefault();
     const userNameInput = this.userNameInput.value;
     const emailInput = this.emailInput.value;
     const passwordInput = this.passwordInput.value;
     const confirmPasswordInput = this.confirmPasswordInput.value;
 
-    const newUser = new User(name, description, reps, sets, video, image);
+    const newUser = new User(userNameInput, emailInput, passwordInput);
+    db.saveNewUser(newUser);
+
 
     // se debe vaciar el form
     this.userNameInput.value = '';

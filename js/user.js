@@ -1,10 +1,7 @@
 class User {
-  constructor(name, description, reps, sets, video, image){
+  constructor(name, email, password){
       this.name = name;
-      this.description = description;
-      this.reps = reps;
-      this.sets = sets;
-      this.video = video;
-      this.image = image;
+      this.email = email;
+      this.password = password;
   }
 }
