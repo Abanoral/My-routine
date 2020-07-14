@@ -10,8 +10,10 @@ body {
   background-repeat: no-repeat;
 }
 
-#home-image {
-  
+.logo-my-routine {
+  width: 5rem;
+  height: 5rem;
+
 }
 
 .success-message {
@@ -25,8 +27,9 @@ body {
 .container {
   padding: 0;
   margin: 0;
+  max-height: 100%;
   max-width: 100%;
-  position: fix;
+  margin-bottom: 2rem;
 }
 
 .message-container {
@@ -57,9 +60,11 @@ body {
 }
 
 nav {
+  overflow: auto;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+  height: 6rem;
 }
 
 input {
