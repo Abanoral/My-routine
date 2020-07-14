@@ -43,9 +43,9 @@ class Validator {
       });
 
       if(emailUnique){
-        delete this.emailExistsError
+        delete this.invalidEmailError
       }else{
-        this.errors.emailExistsError = this.emailExistsError;
+        this.errors.invalidEmailError = this.emailExistsError;
       }
     }
   }

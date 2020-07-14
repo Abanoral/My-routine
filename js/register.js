@@ -91,6 +91,7 @@ class Register {
     }
 
     const successMessageP = document.createElement('p');
+    successMessageP.setAttribute('class', 'success-message')
     successMessageP.innerHTML = 'La cuenta ha sido creada con éxito';
     this.errorsWrapper.appendChild(successMessageP)
   }
