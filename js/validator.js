@@ -83,6 +83,7 @@ class Validator {
       repeatPasswordError: this.repeatPasswordError
     }
   };
+
 }
 
 const validator = new Validator();
