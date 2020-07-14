@@ -11,13 +11,16 @@ class Register {
 
   handleEmailInput = event => {
     const email = event.target.value;
-    console.log('email', email)
+    validator.handleEmailInput(email);
+    const errors = validator.getErrors();
+    if(!errors.invalidEmailError) {
+      validator.validateUniqueEmail(email)
+    }
+
   }
 
   handlePasswordInput = event => {
     const password = event.target.value;
-    console.log('password', password)
-    
   }
   
   handleRepeatInput = event => {
@@ -52,7 +55,6 @@ class Register {
 
     this.signupButton.addEventListener('click', this.saveData);
   }
-
 
 }
 // nueva instancia
