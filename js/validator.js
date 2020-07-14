@@ -1,15 +1,15 @@
 class Validator {
   constructor() {
-    this.invalidEmailError = "Introduce un email valido";
-    this.emailExistsError = "Este email ya esta registrado";
-    this.passwordError = "La contraseña debe tener al menos 6 carateres";
-    this.repeatPasswordErrors = "Los campos no coinciden";
+    this.invalidEmailError = "*Introduce un email valido";
+    this.emailExistsError = "*Este email ya esta registrado";
+    this.passwordError = "*La contraseña debe tener al menos 6 carateres";
+    this.repeatPasswordErrors = "*Los campos no coinciden";
 
     this.errors = {
       // puede que no se iguale a los valores del constructor
       invalidEmailError: this.invalidEmailError,
       passwordError: this.passwordError,
-      repeatPasswordError: this.repeatPasswordError
+      repeatPasswordError: this.repeatPasswordErrors
     };
   }
   validateValidEmail = email => {
@@ -69,7 +69,7 @@ class Validator {
     }
     else {
       // si no coinciden, poner el mensaje
-      this.errors.repeatPasswordError = this.repeatPasswordError;
+      this.errors.repeatPasswordError = this.repeatPasswordErrors;
     }
   };
   // solo para mostrarlos en register.hmtl

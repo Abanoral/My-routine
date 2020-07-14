@@ -5,25 +5,47 @@ body, html {
 body {
   margin: 0;
   padding: 0;
-  background-color: snow;
+  background-image: url(../assets/home-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #home-image {
   
 }
 
+.container {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  position: fix;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-container p {
+  display: block;
+  color: red;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 0px 1px darkred;
+}
+
 #main-container {
   display: flex;
   justify-content: center;
-  background-image: url(../assets/home-image.jpg);
-  object-fit: cover;
-  background-repeat: no-repeat;
-  height: 99%;
   max-height: 100%;
 }
 
 #main-container label{
-  color: lightgray;
+  color: darkorange;
+  font-weight: bold;
 }
 
 nav {
