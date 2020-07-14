@@ -1,9 +1,9 @@
 class Validator {
   constructor() {
-    this.invalidEmailError = "*Introduce un email valido";
-    this.emailExistsError = "*Este email ya esta registrado";
-    this.passwordError = "*La contraseña debe tener al menos 6 carateres";
-    this.repeatPasswordErrors = "*Los campos no coinciden";
+    this.invalidEmailError = '*Enter a valid email';
+    this.emailExistsError = '*This email is registered';
+    this.passwordError = '*Password must have at least 6 characters';
+    this.repeatPasswordErrors = '*Passwords are not same';
 
     this.errors = {
       // puede que no se iguale a los valores del constructor
