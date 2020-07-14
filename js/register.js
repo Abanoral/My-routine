@@ -16,16 +16,25 @@ class Register {
     if(!errors.invalidEmailError) {
       validator.validateUniqueEmail(email)
     }
-
+    this.setErrorsMessages();
   }
 
   handlePasswordInput = event => {
     const password = event.target.value;
+    const passwordRepeat = this.confirmPasswordInput.value;
+
+    validator.validatePassword(password);
+    validator.validatePasswordRepeat(password, passwordRepeat);
+    this.setErrorsMessages();
   }
   
   handleRepeatInput = event => {
-    const repeatPassword = event.target.value;
-    console.log('repeatPassword', repeatPassword)
+    const passwordRepeat = event.target.value;
+    const password = this.passwordInput.value;
+    
+    validator.validatePassword(password);
+    validator.validatePasswordRepeat(password, passwordRepeat);
+    this.setErrorsMessages();
   }
   
   saveData = event => {
@@ -46,6 +55,8 @@ class Register {
     this.passwordInput.value = '';
     this.confirmPasswordInput.value = '';
 
+    this.showSuccessMessage();
+    this.removeMessages();
   }
 
   addListeners = () => {
@@ -54,6 +65,40 @@ class Register {
     this.confirmPasswordInput.addEventListener('input', this.handleRepeatInput);
 
     this.signupButton.addEventListener('click', this.saveData);
+  }
+
+  setErrorsMessages = () => {
+    this.errorsWrapper.innerHTML = "";
+    const errorsObj = validator.getErrors();
+    const errorsStringArr = Object.values(errorsObj);
+    errorsStringArr.forEach( errorString =>
+      {
+        const errorMessageP = document.createElement('p');
+        errorMessageP.innerHTML = errorString;
+        
+        this.errorsWrapper.appendChild(errorMessageP);
+      }
+    )
+  }
+    
+  showSuccessMessage= () => {
+    this.errorsWrapper.innerHTML = '';
+    const errorObj = validator.getErrors();
+    const errorsStringArr = Object.values(errorObj);
+    
+    if(errorsStringArr.length > 1){
+      return;
+    }
+
+    const successMessageP = document.createElement('p');
+    successMessageP.innerHTML = 'La cuenta ha sido creada con éxito';
+    this.errorsWrapper.appendChild(successMessageP)
+  }
+
+  removeMessages = () => {
+    setTimeout( () => {
+      this.errorsWrapper.innerHTML='';
+    }, 2000)
   }
 
 }
