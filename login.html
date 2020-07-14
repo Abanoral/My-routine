@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
   <link rel="stylesheet" href="./styles/styleIndex.css">
+  <!-- <link rel="stylesheet" href="./styles/style.css"> -->
   <title>My routine - Register</title>
 </head>
 <body>
@@ -12,33 +13,29 @@
     <nav class="navbar navbar-dark bg-dark">
       <span class="navbar-brand" id="navUserName">My routine</span>
       <div id="navButtons">
-        <a href="./login.html" class="button" id="login-button">Login</a>
+        <a href="./index.html" class="button" id="register-button">Register</a>
       </div>
     </nav>
   </header>
   <main id="main-container">
+    
     <form action="">
-      <label for="userName">Username</label>
-      <input type="text" placeholder="Userame" id="username" >
       <label for="email">Email</label>
-      <input type="email" placeholder="Email" id="email" >
-      <label for="password">Password</label>
-      <input type="password" placeholder="Password" id="password" >
-      <label for="confirm-password">Repeat password</label>
-      <input type="password" placeholder="Confirm password" id="confirm-password" >
-      <div id="container-button-signup">
-        <button type="submit" id="signup-button">Sign up</button>
+      <input type="text" placeholder="email" id="email" >
+      
+      <label for="password-login">Password</label>
+      <input type="password" placeholder="password" id="password-login" >
+      
+      <div id="container-button-login">
+        <button type="submit" id="login-button">login</button>
       </div>
     </form>
     
   </main>
-
+  
   <div class="message-container">
   </div >
-  
-  <script src="./js/register.js"></script>
-  <script src="./js/user.js"></script>
+  <script src="./js/login.js"></script>
   <script src="./js/database.js"></script>
-  <script src="./js/validator.js"></script>
 </body>
 </html>
