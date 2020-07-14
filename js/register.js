@@ -11,7 +11,7 @@ class Register {
 
   handleEmailInput = event => {
     const email = event.target.value;
-    validator.handleEmailInput(email);
+    validator.validateValidEmail(email);
     const errors = validator.getErrors();
     if(!errors.invalidEmailError) {
       validator.validateUniqueEmail(email)
@@ -60,7 +60,7 @@ class Register {
   }
 
   addListeners = () => {
-    this.emailInput.addEventListener('input', this.handlePasswordInput);
+    this.emailInput.addEventListener('input', this.handleEmailInput);
     this.passwordInput.addEventListener('input', this.handlePasswordInput);
     this.confirmPasswordInput.addEventListener('input', this.handleRepeatInput);
 
