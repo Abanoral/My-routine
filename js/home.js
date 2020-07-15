@@ -18,11 +18,12 @@ class Home {
       for(let i = 0; i <= sessions.length; i++){
         //cambiamos el titulo
       const listSessionContainer = document.createElement('a');
+      let titleIndex = 0;
       listSessionContainer.setAttribute('id', 'session-button');
-      listSessionContainer.setAttribute('href', `./exercise.html?session=${sessions[i][0]}`);
+      listSessionContainer.setAttribute('href', `./exercise.html?session=${sessions[i][titleIndex]}`);
 
       const listSessionTitle = document.createElement('h2');
-      listSessionTitle.innerHTML = sessions[i][0];
+      listSessionTitle.innerHTML = sessions[i][titleIndex];
       
       this.containerSessions.appendChild(listSessionContainer);
       listSessionContainer.appendChild(listSessionTitle);
