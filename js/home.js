@@ -16,7 +16,7 @@ class Home {
 
       const listSessionContainer = document.createElement('a');
       listSessionContainer.setAttribute('id', 'session-button');
-      listSessionContainer.setAttribute('href', `./exercise.html?session=${indexSession}`);
+      listSessionContainer.setAttribute('href', `./exercise.html?session=${indexSession}&titleSession=${iterator[0]}`);
 
       const listSessionTitle = document.createElement('h2');
       listSessionTitle.innerHTML = iterator[0];
