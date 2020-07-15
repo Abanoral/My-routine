@@ -21,13 +21,15 @@ body {
 }
 
 #container-exercises {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
   margin: 15% -10px;
 }
 
+.card {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 5%;
+  margin-right: 5%;
+}
 
 
 /* .container-exercise {
