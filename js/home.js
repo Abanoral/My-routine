@@ -1,25 +1,33 @@
 class Home {
   constructor(){
     this.containerSessions = document.querySelector('#container-sessions');
-  
+    
   }
 
   userNameHome = () => {
   }
 
   showSessions = async () => {
-    const sessions = await getData();
-    Object.entries(sessions).forEach(
-      session => session.forEach(
-      exercise =>
-      console.log(exercise)
-    ));
-    // for(let exercise of sessions){
+    const sessionsData = await getData();
+    const sessions = Object.entries(sessionsData).map( // tiene dos valores nombre de la session y sus ejercicios
+      session => session);
+    
+      
+      
+      
+      for(let i = 0; i <= sessions.length; i++){
+        //cambiamos el titulo
+      const listSessionContainer = document.createElement('div');
+      listSessionContainer.setAttribute('class', 'listSessionContainer');
 
-    //   const exerciseBySession = getDataBySession(exercise);
-    //   console.log(exerciseBySession)
-    // }
-    //Array.from.sessions.forEach(session => console.log(session));
+      const listSessionTitle = document.createElement('h2');
+      listSessionTitle.innerHTML = sessions[i][0];
+      
+      this.containerSessions.appendChild(listSessionContainer);
+      listSessionContainer.appendChild(listSessionTitle);
+    }
+
+    console.log(sessions)
   }
 }
 
