@@ -3,39 +3,46 @@ class Exercise{
     this.containerExercises = document.querySelector('#container-exercises');
   }
 
-  getExercises = () => {
+  getSession = () => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const session = urlParams.get('session');
     console.log(session);
     return session;
-    
-    
   }
 
-  // showExercises = async () => {
-  //   const sessionsData = await getData();
-  //   const sessions = Object.entries(sessionsData).map( // tiene dos valores nombre de la session y sus ejercicios
-  //     session => session);
-    
+  showExercises = async (session) => {
+    const sessionsData = await getData();
+    const sessions = Object.entries(sessionsData).map(session => session);
+    const exercises = Object.entries(sessions[session][1]);
 
-  //     for(let i = 0; i <= sessions.length; i++){
-  //       //cambiamos el titulo
-  //     const listSessionContainer = document.createElement('div');
-  //     let titleIndex = 0;
-  //     listSessionContainer.setAttribute('id', 'exercise-container');
-  //     listSessionContainer.setAttribute('href', `./exercise.html?session=${sessions[i][titleIndex]}`);
 
-  //     const listSessionTitle = document.createElement('h2');
-  //     listSessionTitle.innerHTML = sessions[i][titleIndex];
-      
-  //     this.containerSessions.appendChild(listSessionContainer);
-  //     listSessionContainer.appendChild(listSessionTitle);
-  //   }
+    for(let i = 0; i <= exercises.length; i++){
+      //cambiamos el titulo 
+      const exercisesProp = {...[exercises[0][1]]}
 
-  // }
+      for (const iterator in exercisesProp[0]) {
+        console.log(`${iterator} and ${exercisesProp[0][iterator]}`)
+
+        const listExerciseContainer = document.createElement('div');
+        listExerciseContainer.setAttribute('class', 'card');
+        
+        const listNameExercise = document.createElement('p');
+        listNameExercise.setAttribute('id', `exercise-${iterator}`)
+        listNameExercise.innerHTML = exercisesProp[0][iterator];
+  
+        this.containerExercises.appendChild(listExerciseContainer);
+        listExerciseContainer.appendChild(listNameExercise);
+      }
+    }
+  }
+  getExercises = async () => {
+    const session = this.getSession();
+    const exercises = await this.showExercises(session);
+    return exercises;
+  }
+
 }
 
 const exercise = new Exercise();
-exercise.getExercises();
-//exercise.showExercises();
+// exercise.getExercises();

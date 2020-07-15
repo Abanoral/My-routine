@@ -1,7 +1,3 @@
-body, html {
-  height: 100%;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -23,6 +19,26 @@ body {
   width: 5rem;
   height: 5rem;
 }
+
+#container-exercises {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15% -10px;
+}
+
+
+
+/* .container-exercise {
+  display: block;
+  width: 33%;
+} */
+
+/* .container-exercise p{
+  color: white;
+} */
+
 
 /* LOGIN BUTTON */
 #login-button {
