@@ -1,0 +1,54 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(../assets/background5.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 96px;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  max-height: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.logo-my-routine {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* LOGIN BUTTON */
+#login-button {
+  border-radius: 4px;
+  border-width: 1px;
+  background-color: orange;
+  color: white;
+  padding: 0.8rem 5rem;
+}
+
+#login-button a:active{
+  color: white;
+  text-decoration: none;
+}
+
+#login-button a:link{
+  color: white;
+  text-decoration: none;
+}
+
+#login-button a:visited{
+  color: white;
+  text-decoration: none;
+}
+
+#login-button:hover{
+  text-decoration: none;
+  background-color: darkorange;
+}
