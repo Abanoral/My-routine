@@ -1,13 +1,14 @@
 body, html {
   height: 100%;
+  /* font-size: 10px; */
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  padding-top: 6rem;
   background-image: url(../assets/home-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0 96px;
 }
 
 .logo-my-routine {
