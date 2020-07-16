@@ -4,6 +4,7 @@ class Login{
     this.password = document.querySelector('#password-login');
     this.messageContainer = document.querySelector('.message-container');
     this.loginButton = document.querySelector('#login-button');
+    this.
   }
   // gestionar el envio de los datos (evento "submit")
   submit = (event) => {
