@@ -31,6 +31,64 @@ body {
   margin-right: 5%;
 }
 
+.listSessionContainer {
+  display: flex;
+  margin: 5px;
+  height: 100px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: wheat;
+  border: 1px solid red;
+}
+
+.listSessionContainer h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.listSessions {
+  color: white;
+}
+
+#container-sessions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15% -10px;
+}
+
+#session-button {
+  border-radius: 4px;
+  border-width: 1px;
+  background-color: darkgray;
+  width: 33%;
+  color: white;
+  margin: 10px;
+  padding: 0.8rem 5rem;
+}
+
+#session-button a:active {
+  color: white;
+  text-decoration: none;
+}
+
+#session-button a:link {
+  color: white;
+  text-decoration: none;
+}
+
+#session-button a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#session-button:hover {
+  text-decoration: none;
+  background-color: #343a40;
+}
+
 /* LOGIN BUTTON */
 #login-button {
   border-radius: 4px;
