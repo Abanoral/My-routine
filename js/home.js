@@ -4,31 +4,27 @@ class Home {
     
   }
 
-  sessionToUrl = () => {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    return urlParams.get('session');
-  }
-
   showSessions = async () => {
     const sessionsData = await getData();
     const sessions = Object.entries(sessionsData).map( // tiene dos valores nombre de la session y sus ejercicios
       session => session);
-      
-      for(let i = 0; i <= sessions.length; i++){
-        //cambiamos el titulo
+
+    let indexSession = 0;
+    //cambiamos el titulo
+    for(const iterator of sessions){
+      console.log(`${iterator[0]}`)
+
       const listSessionContainer = document.createElement('a');
-      let titleIndex = 0;
       listSessionContainer.setAttribute('id', 'session-button');
-      listSessionContainer.setAttribute('href', `./exercise.html?session=${sessions[i][titleIndex]}`);
+      listSessionContainer.setAttribute('href', `./exercise.html?session=${indexSession}&titleSession=${iterator[0]}`);
 
       const listSessionTitle = document.createElement('h2');
-      listSessionTitle.innerHTML = sessions[i][titleIndex];
+      listSessionTitle.innerHTML = iterator[0];
       
       this.containerSessions.appendChild(listSessionContainer);
       listSessionContainer.appendChild(listSessionTitle);
+      indexSession++;
     }
-
   }
 }
 
