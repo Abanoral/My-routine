@@ -12,7 +12,6 @@ class Home {
     let indexSession = 0;
     //cambiamos el titulo
     for(const iterator of sessions){
-      console.log(`${iterator[0]}`)
 
       const listSessionContainer = document.createElement('a');
       listSessionContainer.setAttribute('id', 'session-button');
