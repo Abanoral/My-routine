@@ -48,7 +48,5 @@ class Login{
 
 }
 
-
 const login = new Login();
-
 login.loginButton.addEventListener('click', login.submit);
