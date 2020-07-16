@@ -154,4 +154,110 @@ input {
   background-color: darkorange;
 }
 
+@media (max-width: 991px) {
+  body {
+    background-image: url(../assets/background_2-1.jpg);
+  }
 
+  .offcanvas-collapse {
+    position: absolute;
+    top: 96px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #535353;
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+    transition-property: height;
+  }
+
+  .offcanvas-collapse.open {
+    /* viewport */
+    left: 0;
+    visibility: visible;
+    z-index: 1;
+    height: auto;
+    padding: 15px;
+    background: #535353;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    color: white;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+
+  .offcanvas-collapse a {
+    color: white;
+    display: block;
+    width: 100%;
+  }
+
+  .offcanvas-collapse li {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav {
+    overflow: visible;
+  }
+}
+
+@media (min-width: 992px) {
+  nav {
+    flex-wrap: nowrap;
+  }
+
+  nav button {
+    display: none;
+  }
+
+  .offcanvas-collapse {
+    flex-grow: 0;
+    flex-basis: auto;
+  }
+
+  #offcanvas ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  #offcanvas ul li {
+    margin: 0 3px;
+  }
+
+  #nav-button {
+    border-radius: 4px;
+    border-width: 1px;
+    background-color: orange;
+    color: white;
+    padding: 0.8rem 5rem;
+  }
+
+  #nav-button a:active {
+    color: white;
+    text-decoration: none;
+  }
+
+  #nav-button a:link {
+    color: white;
+    text-decoration: none;
+  }
+
+  #nav-button a:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  #nav-button:hover {
+    text-decoration: none;
+    background-color: darkorange;
+  }
+}
