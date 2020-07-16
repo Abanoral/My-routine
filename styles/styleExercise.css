@@ -16,7 +16,7 @@ body {
 }
 
 .logo-my-routine {
-  width: 12rem;
+  width: 10rem;
   height: 5rem;
 }
 
@@ -30,16 +30,6 @@ body {
   margin-left: 5%;
   margin-right: 5%;
 }
-
-
-/* .container-exercise {
-  display: block;
-  width: 33%;
-} */
-
-/* .container-exercise p{
-  color: white;
-} */
 
 
 /* LOGIN BUTTON */
