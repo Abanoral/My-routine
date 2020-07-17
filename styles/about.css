@@ -1,3 +1,8 @@
+body, html {
+  height: 100%;
+  /* font-size: 10px; */
+}
+
 body {
   padding-top: 6rem;
   background-image: url(../assets/background_3.jpg);
@@ -11,12 +16,69 @@ body {
   height: 5rem;
 }
 
+.success-message {
+  display: block;
+  color: green;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .container {
   padding: 0;
   margin: 0;
   max-height: 100%;
   max-width: 100%;
   margin-bottom: 2rem;
+}
+
+#main-about-container {
+  display: flex;
+  flex-direction: column;
+}
+h1{
+  color: orange;
+  font-size: 7rem;
+  margin-bottom: 2rem;
+}
+article{
+  display: block;
+}
+h2{
+  color: orange;
+  font-size: 3rem;
+}
+
+li{
+  color: lightgray;
+  font-size: 1rem;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-container p {
+  display: block;
+  color: red;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 0px 1px darkred;
+}
+
+#main-container {
+  display: flex;
+  justify-content: center;
+  max-height: 100%;
+}
+
+#main-container label{
+  color: darkorange;
+  font-weight: bold;
 }
 
 nav {
@@ -27,6 +89,34 @@ nav {
   height: 6rem;
 }
 
+input {
+  height: 3rem;
+  width: 20rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+#container-button-signup {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+#signup-button {
+  border-radius: 4px;
+  border-width: 1px;
+  background-color: #343a40;
+  color: white;
+  width: 50%;
+  height: 3rem;
+}
+
+#container-button-login {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
 /* Nav BUTTON */
 #nav-button {
   border-radius: 4px;
@@ -34,36 +124,62 @@ nav {
   background-color: orange;
   color: white;
   padding: 0.8rem 5rem;
-}
+} 
 
-#nav-button a:active {
+#nav-button a:active{
   color: white;
   text-decoration: none;
 }
 
-#nav-button a:link {
+#nav-button a:link{
   color: white;
   text-decoration: none;
 }
 
-#nav-button a:visited {
+#nav-button a:visited{
   color: white;
   text-decoration: none;
 }
 
-#nav-button:hover {
+#nav-button:hover{
+  text-decoration: none;
+  background-color: darkorange;
+} 
+
+/* LOGIN BUTTON */
+#login-button {
+  border-radius: 4px;
+  border-width: 1px;
+  background-color: #343a40;
+  color: white;
+  padding: 0.8rem 5rem;
+}
+
+#login-button a:active{
+  color: white;
+  text-decoration: none;
+}
+
+#login-button a:link{
+  color: white;
+  text-decoration: none;
+}
+
+#login-button a:visited{
+  color: white;
+  text-decoration: none;
+}
+
+#login-button:hover{
   text-decoration: none;
   background-color: darkorange;
 }
 
-.card {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
 @media (max-width: 991px) {
+  body {
+    background-image: url(../assets/background_2-1.jpg);
+  }
+
   .offcanvas-collapse {
     position: absolute;
     top: 96px;
@@ -111,14 +227,6 @@ nav {
 
   nav {
     overflow: visible;
-  }
-}
-
-@media (min-width: 768px) {
-  body,
-  html {
-    height: 100%;
-    /* font-size: 10px; */
   }
 }
 
